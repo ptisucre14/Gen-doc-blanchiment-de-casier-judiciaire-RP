@@ -316,31 +316,21 @@ function generate() {
   // Récupération champs utilisateur
 
   let name = document.getElementById("name").value;
-
   let date = document.getElementById("date").value;
-
   let ref = document.getElementById("ref").value;
-
   let fonction = document.getElementById("fonctionSignataire").value;
-
   let nom = document.getElementById("nomSignataire").value;
 
 
   // Injection valeurs dans document
 
   document.getElementById("n").innerText = name;
-
   document.getElementById("d").innerText = date;
-
   document.getElementById("d2").innerText = date;
-
   document.getElementById("r").innerText = ref;
 
-
   document.getElementById("fonction").innerText = fonction || "";
-
   document.getElementById("nom").innerText = nom || "";
-
 
   // Signature manuscrite
 
@@ -349,25 +339,26 @@ function generate() {
 
   // Capture document + téléchargement automatique
 
-  html2canvas(document.getElementById("doc"), {
+  document.fonts.ready.then(() => {
 
-    scale: 3,
+    html2canvas(document.getElementById("doc"), {
 
-    useCORS: true,
+      scale: 3,
+      useCORS: true,
+      width: 794,
+      height: 1123
 
-    width: 794,
+    }).then(canvas => {
 
-    height: 1123
+      let link = document.createElement("a");
 
-  }).then(canvas => {
+      link.download = "document-rp.png";
 
-    let link = document.createElement("a");
+      link.href = canvas.toDataURL("image/png");
 
-    link.download = "document-rp.png";
+      link.click();
 
-    link.href = canvas.toDataURL("image/png");
-
-    link.click();
+    });
 
   });
 
