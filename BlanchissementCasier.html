@@ -359,11 +359,15 @@ function generate() {
   setTimeout(() => {
 
     html2canvas(document.getElementById("doc"), {
+
       scale: 3,
       useCORS: true,
       width: 794,
       height: 1123
-    }).then(canvas => {
+
+    })
+
+.then(canvas => {
 
       let link = document.createElement("a");
 
@@ -375,10 +379,9 @@ function generate() {
 
     });
 
-  }, 300);
+  });
 
-});
-
+}
 </script>
 
 </body>
