@@ -214,17 +214,6 @@ function generate() {
   // ✍️ Signature manuscrite automatique
   document.getElementById("signatureText").innerText = judge;
 
- // Liste dynamique
-  let list = document.getElementById("chargesList");
-  list.innerHTML = "";
-
-  chargesArray.forEach(charge => {
-    if (charge.trim() !== "") {
-      let li = document.createElement("li");
-      li.textContent = charge;
-      list.appendChild(li);
-    }
-  });
 
   // Export PNG
   html2canvas(document.getElementById("doc")).then(canvas => {
