@@ -163,9 +163,18 @@ CENTRAGE SIGNATAIRE
 ============================= */
 
 .center-sign {
-
   text-align: center;
+  margin-top: 40px;
+}
 
+/* =============================
+POSITION SIGNATAIRE MANUSCRITE
+============================= */
+
+.signature-position {
+  position: absolute;
+  bottom: 80px;
+  right: 80px;
 }
 
 /* =============================
@@ -286,32 +295,24 @@ DOCUMENT FINAL
 <div class="bottom">
 
   <!-- LOGOS -->
-
+<div class="bottom">
   <div>
-
     <img src="logo1.png" class="logo">
     <img src="logo2.png" class="logo">
-
   </div>
+</div>
 
+<!-- SIGNATAIRE CENTRÉ -->
+<div class="center-sign">
+  <p>Fonction :</p>
+  <p id="fonction" class="bold"></p>
 
-  <!-- SIGNATAIRE CENTRE -->
+  <p>Signataire :</p>
+  <p id="nom" class="bold"></p>
+</div>
 
-  <div class="center-sign">
-
-    <p>
-      Fonction :
-      <span id="fonction" class="bold"></span>
-    </p>
-
-    <p>
-      Signataire :
-      <span id="nom" class="bold"></span>
-    </p>
-
-    <!-- SIGNATURE MANUSCRITE -->
-
-    <div id="signatureText" class="signature-hand"></div>
+<!-- SIGNATURE EN BAS DROITE -->
+<div id="signatureText" class="signature-hand signature-position"></div>
 
 </div> <!-- FIN center-sign -->
 
