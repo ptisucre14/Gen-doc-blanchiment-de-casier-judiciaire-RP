@@ -53,8 +53,12 @@
         .hidden { display: none; }
 
         .menu {
-            margin-top: 30px;
-        }
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colonnes */
+    gap: 20px;
+    max-width: 600px;
+    margin: 30px auto;
+}
 
         .card {
             background: white;
@@ -98,28 +102,18 @@
     <p>Sélectionnez une section</p>
 
     <div class="menu">
-        <div class="card" onclick="goTo('BlanchissementCasier.html')">📄 Générer blanchiment de casier judiciaire</div>
-    </div>
+    <div class="card" onclick="goTo('BlanchissementCasier.html')">📄 Générer blanchiment de casier judiciaire</div>
 
-    <div class="menu">
-        <div class="card" onclick="goTo('MANDAT D’ARRÊT.html')">📄 Générer mandat d'arrêt</div>
-    </div>
+    <div class="card" onclick="goTo('MANDAT D’ARRÊT.html')">📄 Générer mandat d'arrêt</div>
 
-    <div class="menu">
-        <div class="card" onclick="goTo('Réquisition judiciaire.html')">📄 Générer réquisition judiciaire</div>
-    </div>
+    <div class="card" onclick="goTo('Réquisition judiciaire.html')">📄 Générer réquisition judiciaire</div>
 
-    <div class="menu">
-        <div class="card" onclick="goTo('MANDAT DE PERQUISITION DE PROPRIÉTÉ.html')">📄 Générer mandat de perquisition</div>
-    </div>
+    <div class="card" onclick="goTo('MANDAT DE PERQUISITION DE PROPRIÉTÉ.html')">📄 Générer mandat de perquisition</div>
 
-    <div class="menu">
-        <div class="card" onclick="goTo('RÉQUISITION TÉLÉPHONIQUE.html')">📄 Générer réquisition téléphonique</div>
-    </div>
+    <div class="card" onclick="goTo('RÉQUISITION TÉLÉPHONIQUE.html')">📄 Générer réquisition téléphonique</div>
 
-    <div class="menu">
-        <div class="card" onclick="goTo('GÉOLOCALISATION TÉLÉPHONIQUE (SUR PÉRIODE DÉTERMINÉE).html')">📄 Générer réquisition localisation téléphone période</div>
-    </div>
+    <div class="card" onclick="goTo('GÉOLOCALISATION TÉLÉPHONIQUE (SUR PÉRIODE DÉTERMINÉE).html')">📄 Générer réquisition localisation téléphone période</div>
+</div>
     
     <button class="btn" onclick="logout()">Se déconnecter</button>
 </header>
